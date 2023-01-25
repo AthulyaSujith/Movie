@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="one" style="position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);">
+<form method="POST" enctype="multipart/form-data">
+
+  {% csrf_token %}
+  {{form.as_p}}
+  <input type="submit">
+  </form>
+{% endblock %}

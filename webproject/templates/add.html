@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+<br><br><div class="one" style="position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);">
+    <h1><u><font color="red">ADD MOVIES HERE</font></u></h1><br>
+ <label><b>Enter movie name: <input type="text" name="name"></b></label><br><br>
+  <label><b>Enter movie year: <input type="number" name="year"></b></label><br><br>
+   <label><b> Enter movie description:<input type="textarea()" name="desc" rows="4" cols="5"></b></label><br><br>
+    <label><b>Add an Image :  <input type="file" name="imgs"></b></label><br><br><br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit"></div>
+</form>
+{% endblock %}}
